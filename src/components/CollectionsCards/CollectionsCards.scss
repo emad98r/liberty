@@ -1,0 +1,62 @@
+@import '../styling/mediaQuery.scss';
+@import '../styling/colors.scss';
+
+.coll-cards {
+  width: 100%;
+
+  .card {
+    width: 100%;
+    background-color: $card-bg-color;
+    position: relative;
+    border-radius: 20px;
+
+    img {
+      border-radius: 20px 20px 0 0;
+      width: 100%;
+    }
+
+    .info {
+      padding: 1.5em;
+
+      h4 {
+        font-size: 1.2em;
+        font-weight: 700;
+        margin-bottom: 1em;
+      }
+
+      hr {
+        width: 100%;
+        background-color: #424141;
+        height: 1px;
+        border: none;
+        margin-bottom: 1em;
+      }
+
+      .data {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        .Items-In-Collection,
+        .Category {
+          p {
+            margin-bottom: 0.5em;
+          }
+
+          b {
+            font-weight: 700;
+          }
+        }
+      }
+
+    }
+
+    button {
+      position: absolute;
+      bottom: -4em;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+    }
+  }
+}

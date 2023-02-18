@@ -1,0 +1,37 @@
+@import '../../components/styling/mediaQuery.scss';
+@import '../../components/styling/colors.scss';
+
+
+.Collections {
+  width: 100%;
+
+  .container {
+    overflow-x: clip;
+
+    .coll-cards-wrapper {
+      display: flex;
+      width: 200%;
+      gap: 2em;
+      animation: cardMoving 10s infinite linear alternate;
+
+      &:hover {
+        animation-play-state: paused;
+      }
+    }
+  }
+}
+
+@keyframes cardMoving {
+  0% {
+    transform: translateX(0);
+  }
+
+  // 50% {
+  //   // transform: translateX(-50vw);
+  // }
+
+  100% {
+    transform: translateX(-100vh);
+  }
+
+}

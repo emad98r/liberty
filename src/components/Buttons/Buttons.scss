@@ -1,0 +1,35 @@
+@import '../styling/mediaQuery.scss';
+@import '../styling/colors.scss';
+
+button {
+  width: 15em;
+  padding: 1em 1.5em;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  font-weight: 400;
+  font-size: 1em;
+  cursor: pointer;
+
+  @include breakPoints(mobile) {
+    width: 9em;
+  }
+}
+
+.main-but {
+  background-color: $main-color ;
+  color: $light-color;
+
+  &:hover {
+    background-color: $dark-color;
+  }
+}
+
+.sub-but {
+  background-color: $light-color;
+  color: $main-color;
+
+  &:hover {
+    background-color: $card-bg-color;
+  }
+}

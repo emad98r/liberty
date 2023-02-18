@@ -1,0 +1,82 @@
+@import '../styling/mediaQuery.scss';
+@import '../styling/colors.scss';
+
+header {
+  width: 100%;
+  padding: 2em 1em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  background-color: $dark-color;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+
+  a {
+    text-decoration: none;
+    color: $light-color;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    h2 {
+      font-size: 1.9em;
+      padding-left: 0.5em;
+      border-left: 3px solid $main-color;
+    }
+
+    .menu-list {
+      display: none;
+
+      @include breakPoints(mobile) {
+        display: block;
+        width: 3em;
+        border-radius: 50%;
+
+        svg {
+          color: $main-color;
+          font-size: 1em;
+        }
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      @include breakPoints(mobile) {
+        flex-direction: column;
+        position: absolute;
+        top: 6em;
+        left: 0;
+        background-color: $dark-color;
+        width: 100%;
+        display: none;
+      }
+
+      li {
+        padding: 1em 1.5em;
+
+
+        &:hover {
+          cursor: pointer;
+          background-color: $main-color;
+          color: $light-color;
+        }
+      }
+    }
+
+    .active {
+      background-color: $main-color;
+      color: $light-color;
+    }
+  }
+}

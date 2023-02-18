@@ -1,0 +1,25 @@
+@import '../styling/mediaQuery.scss';
+@import '../styling/colors.scss';
+
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 1em 0;
+  background-color: $main-color;
+  margin-top: 1em;
+
+  p {
+    color: $light-color;
+    font-weight: 700;
+
+    a {
+      text-decoration: none;
+      color: $dark-color;
+      margin-left: 0.5em;
+
+      &:hover {
+        color: $light-color
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+@import '../styling/colors.scss';
+@import '../styling/mediaQuery.scss';
+
+.cards-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+
+  @include breakPoints(mobile) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  @include breakPoints(small) {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: calc(100% /6);
+    height: 10em;
+    flex-wrap: wrap;
+    background-color: $card-bg-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    outline: 1px solid #8080804f;
+
+    @include breakPoints(mobile) {
+      width: 45%;
+    }
+
+    @include breakPoints(small) {
+      width: 30%;
+    }
+
+    i {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $light-color ;
+      width: 4em;
+      height: 4em;
+      border-radius: 50%;
+      padding: 1em;
+      margin-bottom: 1em;
+
+      svg {
+        color: $main-color;
+        font-size: 3em;
+      }
+    }
+
+    h4 {
+      display: inline;
+      width: 100%;
+      font-size: 1em;
+      font-weight: 700;
+      text-align: center;
+    }
+  }
+}

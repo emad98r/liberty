@@ -1,0 +1,58 @@
+@import '../styling/colors.scss';
+@import '../styling/mediaQuery.scss';
+
+
+.step {
+  width: 100%;
+  padding: 2em;
+
+  &:nth-of-type(2) {
+    border-left: 1px solid #bcbcbc;
+    border-right: 1px solid #bcbcbc;
+
+    @include breakPoints(mobile) {
+      border: none;
+      border-top: 1px solid #bcbcbc;
+      border-bottom: 1px solid #bcbcbc;
+    }
+
+    @include breakPoints(small) {
+      border: none;
+      border-top: 1px solid #bcbcbc;
+      border-bottom: 1px solid #bcbcbc;
+    }
+  }
+
+  .img-bg {
+    margin-bottom: 2em;
+    background-color: $light-color;
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      color: $main-color;
+      width: 3em;
+      height: 3em;
+    }
+  }
+
+  h4 {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+
+  }
+
+  p {
+    width: 80%;
+    font-weight: 400;
+    line-height: 1.5;
+
+    @include breakPoints(mobile) {
+      width: 100%;
+    }
+  }
+}
